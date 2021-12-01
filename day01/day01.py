@@ -33,7 +33,7 @@ def solution2():
     l = read_txt(fn)
     print(l)
     res = 0
-    for i in range(len(l)-2):
+    for i in range(1, len(l)-2):
         a = l[i+2]
         b = l[i-1]
         if a > b:
