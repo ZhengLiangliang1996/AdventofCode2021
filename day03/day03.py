@@ -52,8 +52,10 @@ def solution2():
         # If 0 and 1 are equally common, keep values with a 1 in the position being considered.
         a = cnt.most_common(1)[0][0]
         b = cnt.most_common(2)[1][0]
+        a_num = cnt.most_common(1)[0][1]
+        b_num = cnt.most_common(2)[1][1]
         print(ogr)
-        if a == b:
+        if a_num == b_num:
             a = '1'
         if len(ogr) > 1:
             ogr = [x for x in ogr if x[i] == a]
@@ -72,8 +74,10 @@ def solution2():
         # If 0 and 1 are equally common, keep values with a 0 in the position being considered.
         a = cnt.most_common(1)[0][0]
         b = cnt.most_common(2)[1][0]
-
-        if a == b:
+        a_num = cnt.most_common(1)[0][1]
+        b_num = cnt.most_common(2)[1][1]
+        print(ogr)
+        if a_num == b_num:
             b = '0'
         
         if len(co2) > 1:
