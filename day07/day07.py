@@ -40,7 +40,7 @@ def solution2():
     lines = [int(line.rstrip()) for line in l[0].split(',')]
     lines.sort()
     f = float('inf')
-    for i in range(lines[0], max(lines)+1):
+    for i in range(lines[0], max(lines)//2+1):
         res = 0
         for j in range(len(lines)):
             res += sum(list(range(1, abs(lines[j] - i)+1)))
