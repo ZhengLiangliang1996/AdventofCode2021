@@ -95,20 +95,13 @@ def solution2():
     brd = list(brd)
 
     for y in range(max_y + 1):
+        a = []
         for x in range(max_x + 1):
             if (x, y) in brd:
-                print('*', end='*')
+                a.append('*')
             else:
-                print(' ', end='_')
-        print(' ')
-    #print()
-    # brd = list(brd)
-    # data_in_array = np.array(brd)
-    # transposed = data_in_array.T
-    # x, y = data_in_array 
-    # fig, ax = plt.subplots(1,1) 
-    # ax.plot(x, y, 'ro')
-    # fn_image = os.path.join(PATH, 'day13', 'a.png')
-    # fig.savefig(fn_image)
+                a.append(' ')
+        print(''.join(a))
+
 
 solution2()
