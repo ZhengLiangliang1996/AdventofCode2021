@@ -25,12 +25,11 @@ def solution1():
     res = 0 
     cnt = 0
     # search space: starting pos: 0, left bound > 0, x_v start from positive
-    # same for x_y:  -101  <-0-> 101
-    # velocity
+    # same for v_y:  -101  <-0-> 101
+    # velocity: x_v, y_v
     # for i in range(1, 287+1):
     for i in range(1,287+1):
         # symmetric 
-        
         for j in range(-101, 101):
         #for j in range(-101-1, 101+1+1000):
             x, y, x_v, y_v = 0, 0, i, j  
