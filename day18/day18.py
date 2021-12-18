@@ -102,15 +102,21 @@ def explode(s):
             r = global_string[i+3]
             left_first, right_first = -1, -1
 
-            for j in range(len(old_s)):
-                if isinstance(global_string[j], int) and j < i:
-                    left_first = j
-                elif isinstance(global_string[j], int) and j>i+3 and right_first == -1:
+            for j in range(i+4, len(old_s)):
+                if isinstance(global_string[j], int): 
                     right_first = j
+                    break 
+            if j == len(old_s) - 1: right_first = -1
+            
+            for j in range(i-1, -1, -1):
+                if isinstance(global_string[j], int): 
+                    left_first = j 
+                    break
+            if j == 0: left_first = -1
             
             if right_first != -1:
                 global_string[right_first] += r
-                print(global_string[right_first])
+                
             global_string = global_string[:i] + ['0'] + global_string[i+5:]
 
             if left_first != -1:
