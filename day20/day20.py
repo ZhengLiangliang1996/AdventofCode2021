@@ -77,17 +77,18 @@ def solution1():
         if sub: 
             for s in sub: 
                 if s == '.':
-                    sub_list.append(0)
+                    sub_list.append(ref_map[s])
                 if s == '#':
-                    sub_list.append(1)
+                    sub_list.append(ref_map[s])
         if sub_list:
             image.append(sub_list)
     
     image = np.array(image)
     # padding_size = 2 
     padding_value = 0
-    
-    for i in range(2):
+    # change to 50 is the answer of second part 
+    run_time = 2 
+    for i in range(run_time):
         image = run(image,ref,padding_value)
         
         if padding_value == 0:
