@@ -46,10 +46,10 @@ def solution1():
 # can see from the pattern when parsing the instructions one by one 
 # x will be cancel out back to 0 if add x ## > 10
 
-# z = d0+6
-# z = (d0+6) * 26 + d1 + 14
-# z = ((d0+6) * 26 + d1+14) * 26 + d2 + 13
-# in the fourth part we have our first subjection 
+# z = d0+6 FIRST PART (SEE BELOW)
+# z = (d0+6) * 26 + d1 + 14 SECOND PART (SEE BELOW)
+# z = ((d0+6) * 26 + d1+14) * 26 + d2 + 13 THIRD PART (SEE BELOW)
+# in the fourth part we have our first subjection  FOURTH PART (SEE BELOW)
 # d3 == d2 + 13 -14 => d3 == d2 - 1
 
 # So if we found that z keeps doing *26 and mod 26 operations 
