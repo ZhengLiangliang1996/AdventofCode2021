@@ -64,6 +64,9 @@ def solution1():
 # it is involve with w and only change with 'add' if we found add x 
 # is positive
 
+# And the rest is the same of tracking whats left inside z in the last
+# term when seeing add negative x
+
 # we have 
 # FIRST PART 
 # w = d0, x= 0, y = 0, z = 0
@@ -120,20 +123,20 @@ def solution1():
 # add y 25 x= 0, y = 25, z = (d0+6) * 26 + d1+14
 # mul y x x= 0, y = 25, z = (d0+6) * 26 + d1+14
 # add y 1 x= 0, y = 26, z = (d0+6) * 26 + d1+14
-# mul z y x= 0, y = 26, z = ((d0+6) * 26 + d1+14) * 26
+# mul z y x= 0, y = 26, z = (d0+6) * 26 + d1+14
 # #...
 # add z y  z = ((d0+6) * 26 + d1+14) * 26 + d2 + 13
 
 
 # FOURTH PART 
-# w = d3, x= d1+14, y = d1+14, z = (((d0+6) * 26 + d1+14) * 26 + 13) * 26
+# w = d3, x= d1+14, y = d1+14, z = ((d0+6) * 26 + d1+14) * 26 + 13
 
 # mul x 0 x= 0, y = d2+13, z = (((d0+6) * 26 + d1+14) * 26 +d2 + 13) * 26
-# add x z  x= 0, y = d2+13, z = (((d0+6) * 26 + d1+14) * 26 +d2 + 13) * 26
-# mod x 26 x= d2+13, y = d2+13, z = (((d0+6) * 26 + d1+14) * 26 +d2 + 13)
+# add x z  x= ((d0+6) * 26 + d1+14) * 26 + 13, y = d2+13, z = ((d0+6) * 26 + d1+14) * 26 +d2 + 13
+# mod x 26 x= d2+13, y = d2+13, z = ((d0+6) * 26 + d1+14) * 26 +d2 + 13
 # div z 26 x= d2+13, y = d2+13, z = d0 + 6 + d1 + 14
 # add x -14 x= d2+13 -14, y = d2+13, z = d0 + 6 + d1 + 14
-# eql x w x= d2+13 -14, y = d2+13, z = d0 + 6 + d1 + 14
+# eql x w x= d2+13 -14, y = d2+13, z = d0 + 6 + d1 + 14 => d2+13-14 == d3
 # eql x 0 
 # mul y 0
 # add y 25
