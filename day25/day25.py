@@ -7,13 +7,6 @@
 # Distributed under terms of the MIT license.
 import os 
 import copy 
-import math 
-import re
-import itertools
-import collections
-import functools
-import sys
-sys.setrecursionlimit(1500)
 
 PATH = '/Users/liangliang/Desktop/AdventOfCode2021'
 
@@ -68,14 +61,6 @@ def solution1():
             freeze = True 
     print(step)
 
-def solution2():
-    fn = os.path.join(PATH, 'day25', 'input.txt')
-    # l = read_txt(fn)
-    # l = ''.join(l)
-    # a = l.split('\n\n')
-    p1_pos, p1_s = 7, 0
-    p2_pos, p2_s = 6, 0
-    # roll = 1
 
 
 
